@@ -48,8 +48,7 @@ begin
 
 procedure TfrmAtividade27.edt_resultadoDblClick(Sender: TObject);
 begin
-  ShowMessage('Aluno: ' + edt_nome.Text + sLineBreak +
-              'Média: ' + FloatToStr(resultado));
+  ShowMessage('Aluno: ' + edt_nome.Text + sLineBreak + 'Média: ' + FloatToStr(resultado));
 end;
 
 end.

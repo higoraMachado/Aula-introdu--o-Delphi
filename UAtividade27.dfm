@@ -53,6 +53,7 @@ object frmAtividade27: TfrmAtividade27
     Height = 57
     Caption = 'Calcular M'#233'dia'
     TabOrder = 0
+    OnClick = btn_mediaClick
   end
   object edt_n1: TEdit
     Left = 40
