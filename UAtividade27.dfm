@@ -93,7 +93,7 @@ object frmAtividade27: TfrmAtividade27
     Left = 472
     Top = 168
     Width = 97
-    Height = 47
+    Height = 23
     TabOrder = 6
   end
 end

@@ -57,7 +57,7 @@ end;
 
 procedure TfrmPrincipal.btnAtividade27Click(Sender: TObject);
 begin
-  //frmAtividade27.ShowModal;
+  frmAtividade27.ShowModal;
 end;
 
 end.
