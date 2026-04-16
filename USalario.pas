@@ -3,8 +3,8 @@ unit USalario;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
   TfrmSalario = class(TForm)
@@ -13,30 +13,34 @@ type
     lbl_ValorHora: TLabel;
     lbl_HorasTrabalhadas: TLabel;
     btn_calcular: TButton;
-    procedure TfrmSalario.btn_calcularClick(Sender: TObject);
+    procedure btn_calcularClick(Sender: TObject);
   private
-    valorHora := StrToFloat(edtValorHora.Text);
-  horas := StrToFloat(edtHoraTrabalhada.Text);
   public
-    { Public declarations }
   end;
 
 var
   frmSalario: TfrmSalario;
-  valorHora, horas, salarioBruto: Real;
-  inss, sindicato, fgts, ir, salarioLiquido: Real;
-  salarioBruto := valorHora * horas;
-  inss := salarioBruto * 0.10;
-  sindicato := salarioBruto * 0.03;
-  fgts := salarioBruto * 0.11;
-
 
 implementation
 
 {$R *.dfm}
 
+procedure TfrmSalario.btn_calcularClick(Sender: TObject);
+var
+  valorHora, horas, salarioBruto: Real;
+  inss, sindicato, fgts, ir, salarioLiquido: Real;
+begin
+  // Pegando valores dos campos
+  valorHora := StrToFloat(edtValorHora.Text);
+  horas := StrToFloat(edtHoraTrabalhada.Text);
 
-  // Cálculo do IR
+  // Cálculos
+  salarioBruto := valorHora * horas;
+  inss := salarioBruto * 0.10;
+  sindicato := salarioBruto * 0.03;
+  fgts := salarioBruto * 0.11;
+
+  // IR
   if salarioBruto <= 1900 then
     ir := 0
   else if salarioBruto <= 3500 then
@@ -49,7 +53,7 @@ implementation
   // Salário líquido
   salarioLiquido := salarioBruto - inss - sindicato - ir;
 
-  // Mostrar resultado
+  // Exibir resultado
   ShowMessage(
     'Salário Bruto: R$ ' + FloatToStr(salarioBruto) + sLineBreak +
     'INSS (10%): R$ ' + FloatToStr(inss) + sLineBreak +
@@ -59,4 +63,5 @@ implementation
     'Salário Líquido: R$ ' + FloatToStr(salarioLiquido)
   );
 end;
+
 end.

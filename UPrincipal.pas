@@ -35,7 +35,8 @@ implementation
 
 {$R *.dfm}
 
-uses UExemplo01, UAtividade01, UExemplo02, UAtividade02, UAtividade27, UMensagem;
+uses UExemplo01, UAtividade01, UExemplo02, UAtividade02, UAtividade27,
+UMensagem, USalario;
 
 
 

@@ -29,14 +29,14 @@ object frmSalario: TfrmSalario
     Left = 120
     Top = 144
     Width = 97
-    Height = 33
+    Height = 23
     TabOrder = 0
   end
   object edtHoraTrabalhada: TEdit
     Left = 256
     Top = 144
     Width = 97
-    Height = 33
+    Height = 23
     TabOrder = 1
   end
   object btn_calcular: TButton
@@ -46,5 +46,6 @@ object frmSalario: TfrmSalario
     Height = 33
     Caption = 'Calcular'
     TabOrder = 2
+    OnClick = btn_calcularClick
   end
 end
