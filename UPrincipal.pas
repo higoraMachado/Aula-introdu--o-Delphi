@@ -14,12 +14,14 @@ type
     btnAtividade02: TButton;
     btnAtividade27: TButton;
     btnMensagem: TButton;
+    btnSalario: TButton;
     procedure btnExemplo01Click(Sender: TObject);
     procedure btnAtividade01Click(Sender: TObject);
     procedure btnExemplo02Click(Sender: TObject);
     procedure btnAtividade02Click(Sender: TObject);
     procedure btnAtividade27Click(Sender: TObject);
     procedure btnMensagemClick(Sender: TObject);
+    procedure btnSalarioClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,6 +62,11 @@ end;
 procedure TfrmPrincipal.btnMensagemClick(Sender: TObject);
 begin
  frmMensagem.ShowModal;
+end;
+
+procedure TfrmPrincipal.btnSalarioClick(Sender: TObject);
+begin
+frmSalario.ShowModal;
 end;
 
 procedure TfrmPrincipal.btnAtividade27Click(Sender: TObject);

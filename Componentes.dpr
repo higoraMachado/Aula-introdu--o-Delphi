@@ -10,7 +10,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   UAtividade27 in 'UAtividade27.pas' {frmAtividade27},
-  UMensagem in 'UMensagem.pas' {frmMensagem};
+  UMensagem in 'UMensagem.pas' {frmMensagem},
+  USalario in 'USalario.pas' {frmSalario};
 
 {$R *.res}
 
@@ -25,5 +26,6 @@ begin
   Application.CreateForm(TfrmAtividade02, frmAtividade02);
   Application.CreateForm(TfrmAtividade27, frmAtividade27);
   Application.CreateForm(TfrmMensagem, frmMensagem);
+  Application.CreateForm(TfrmSalario, frmSalario);
   Application.Run;
 end.
