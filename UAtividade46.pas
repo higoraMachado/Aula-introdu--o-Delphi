@@ -25,21 +25,30 @@ implementation
 {$R *.dfm}
 
 
-
 procedure TfrmAtividade46.FormShow(Sender: TObject);
 var
-  contarErro : Integer;
-  vDigitado, senha : String;
+  contarErro: Integer;
+  vDigitado, senha: String;
 begin
   senha := '1475369';
-  contarErro := -1;
+  contarErro := 0;
 
- for contarErro := -1 to 2 do
- begin
-   if (contarErro
+  while contarErro < 3 do
+  begin
+    vDigitado := InputBox('Senha', 'Digite a senha:', '');
 
- end;
+    if vDigitado = senha then
+    begin
+      lblMensagem.Caption := 'Acesso permitido!';
+      Exit;
+    end
+    else
+    begin
+      contarErro := contarErro + 1;
+      ShowMessage('Senha incorreta! Tentativa ' + IntToStr(contarErro));
+    end;
+  end;
 
+  lblMensagem.Caption := 'Acesso bloqueado!';
 end;
-
 end.
