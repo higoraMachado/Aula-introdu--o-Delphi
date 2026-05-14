@@ -140,7 +140,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade52: TButton
     Left = 384
-    Top = 199
+    Top = 208
     Width = 150
     Height = 41
     Caption = 'Atividade 52'

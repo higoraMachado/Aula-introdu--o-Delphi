@@ -36,7 +36,6 @@ object frmAtividade52: TfrmAtividade52
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    OnDblClick = lblFimDblClick
   end
   object mmoValores: TMemo
     Left = 200
@@ -91,5 +90,6 @@ object frmAtividade52: TfrmAtividade52
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = btnExibirClick
   end
 end
