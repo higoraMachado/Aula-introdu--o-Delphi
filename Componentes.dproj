@@ -184,6 +184,14 @@
             <Form>frmAtividade52</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UAtividade53.pas">
+            <Form>frmAtividade53</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UAtividade54.pas">
+            <Form>frmAtividade54</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
