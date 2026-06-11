@@ -46,5 +46,6 @@ begin
   Application.CreateForm(TfrmAtividade52, frmAtividade52);
   Application.CreateForm(TfrmAtividade53, frmAtividade53);
   Application.CreateForm(TfrmAtividade54, frmAtividade54);
+  Application.CreateForm(TfrmAtividade54, frmAtividade54);
   Application.Run;
 end.
